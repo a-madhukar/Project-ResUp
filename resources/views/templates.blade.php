@@ -1,0 +1,6 @@
+@include('templates.basic_info')
+@include('templates.res_summary')
+@include('templates.res_experience')
+@include('templates.res_projects')
+@include('templates.res_education')
+@include('templates.res_skills')

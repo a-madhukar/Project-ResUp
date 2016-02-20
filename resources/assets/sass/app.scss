@@ -1,0 +1,17 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+html{
+	height:100%; 
+	overflow:hidden;
+}
+
+body{
+	padding-top:20px;
+	padding-bottom:20px; 
+	height:100%; 
+	overflow:auto; 
+}
+
+.navbar{
+	margin-bottom:20px; 
+}

@@ -1,5 +1,10 @@
 <template id="resExperience">
-	<form action="#" method="POST" class="col-md-8 col-md-offset-2 res-form">
+	<form 
+	action="#" 
+	method="POST" 
+	class="col-md-8 col-md-offset-2 res-form"
+	@submit.prevent>
+		@{{$data|json}}
 		<div class="col-md-4">
 			
 		</div>

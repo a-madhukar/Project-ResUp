@@ -7,60 +7,70 @@
 		type="text" 
 		class="form-control" 
 		id="name"
+		name="name"
 		placeholder="BSc(Hons). In Software Engineering."
+		v-model="qualification.name"
 		>
 	</div>
 
 	<div class="form-group">
-		<label for="location">
-			<b>Where</b> Did You Earn Your Degree/Qualification?
+		<label for="instituion_name">
+			<b>Where</b> Did You Earn Your <span v-show="!qualification.name">Degree/Qualification</span>@{{qualification.name}}?
 		</label>
 		<input 
 		type="text" 
 		class="form-control" 
-		id="location"
+		id="instituion_name"
+		name="instituion_name"
 		placeholder="Asia Pacific University"
+		v-model="qualification.institution_name"
 		>
 	</div>
 
 	<div class="form-group">
-		<label for="duration">
-			<b>Where</b> Is The Institution Located? 
+		<label for="institution_location">
+			<b>Where</b> Is <span v-show="!qualification.institution_name">The Institution</span>@{{qualification.institution_name}} Located? 
 		</label>
 		<input 
 		type="text" 
 		class="form-control" 
-		id="duration"
+		id="institution_location"
+		name="institution_location"
 		placeholder="Malaysia"
+		v-model="qualification.institution_location"
 		>
 	</div>
 
 	<div class="form-group">
-		<label for="role">
-			<b>When</b> Did You Earn Your Degree/Qualification?  
+		<label for="graduation_date">
+			<b>When</b> Did You Earn Your <span v-show="!qualification.name">Degree/Qualification</span>@{{qualification.name}}?  
 		</label>
 		<input 
 		type="text" 
 		class="form-control" 
-		id="personal_website"
+		id="graduation_date"
+		name="graduation_date"
 		placeholder="2015"
+		v-model="qualification.graduation_date"
 		>
 	</div>
 
 	<div class="form-group">
-		<label for="role">
+		<label for="cgpa">
 			<b>GPA</b> (If Applicable)
 		</label>
 		<input 
 		type="text" 
 		class="form-control" 
-		id="personal_website"
+		id="cgpa"
+		name="cgpa"
 		placeholder="3.33"
+		v-model="qualification.cgpa"
 		>
 	</div>
 
 	<div class="form-group">
-		<button class="btn btn-primary form-control">
+		<button class="btn btn-primary form-control" @click="addQualification">
 			Save To Qualifications List
 		</button>
 	</div>

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-	<div class="jumbotron">
+	<div class="jumbotron" v-show="!currentView">
 		Hello World
 	</div>
 

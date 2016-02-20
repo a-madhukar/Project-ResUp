@@ -1,0 +1,45 @@
+$form-color:#F8F8F8; 
+
+.res-form
+{
+	margin-top:30px; 
+	padding:25px; 
+	background-color:$form-color;
+	border:1px solid #E2D9D9;
+
+	.form-group{
+		margin-bottom:20px; 
+	}
+
+	label{
+		font-weight:normal; 
+		font-size:14px;
+	}
+
+	input{
+		border-radius:0px; 
+		height:50px; 
+		letter-spacing:2px;  
+		border:0px;
+		margin-top:5px;
+		font-size:12px; 
+	}
+
+	textarea{
+		border-radius:0px; 
+		letter-spacing:1px;  
+		border:0px;
+		margin-top:5px;
+		font-size:12px; 
+		padding:20px;
+	}
+
+	.btn-group{
+		padding-top:30px; 
+
+	}
+	button{
+			height:50px;
+			font-size:14px;
+		}
+}

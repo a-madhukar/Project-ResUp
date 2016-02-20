@@ -39,7 +39,9 @@
 		</nav>
 
 
-		@yield('content')
+		<div class="container-fluid" id="app-content">
+			@yield('content')
+		</div>
 
 	</div>
 

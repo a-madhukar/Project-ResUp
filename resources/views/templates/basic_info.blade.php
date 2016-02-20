@@ -1,5 +1,5 @@
 <template id="basicInfo">
-	<div class="jumbotron">
-		<h3>Basic Info form goes here</h3>
-	</div>
+	<form action="#" method="POST" class="col-md-8 col-md-offset-2 res-form">
+		@include('partials.forms._basic-info')
+	</form>
 </template>

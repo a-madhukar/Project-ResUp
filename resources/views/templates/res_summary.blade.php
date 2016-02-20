@@ -1,5 +1,5 @@
 <template id="resSummary">
-	<div class="jumbotron">
-		<h3>Res summary goes here</h3>
-	</div>
+	<form action="#" method="POST" class="col-md-8 col-md-offset-2 res-form">
+		@include('partials.forms._res-summary')
+	</form>
 </template>

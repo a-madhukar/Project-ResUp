@@ -1,6 +1,9 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import "components/res-form.scss";
+@import "components/res-display-list.scss";
+@import "components/pdf-display.scss";
+
 
 html{
 	height:100%; 
@@ -17,3 +20,4 @@ body{
 .navbar{
 	margin-bottom:20px; 
 }
+

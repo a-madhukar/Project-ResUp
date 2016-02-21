@@ -4,3 +4,5 @@
 @include('templates.res_projects')
 @include('templates.res_education')
 @include('templates.res_skills')
+@include('templates.res_display_list')
+@include('templates.res_generate')

@@ -1,4 +1,3 @@
-@{{$data|json}}
 <div class="form-group">
 	<label for="summary">
 		Write A Nice <b>Professional Summary</b>

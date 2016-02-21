@@ -29,7 +29,7 @@
 						<li><a href="#res-projects">Projects</a></li>
 						<li><a href="#res-education">Education</a></li>
 						<li><a href="#res-skills">Skills</a></li>
-						<li><a href="#">Finish Up</a></li>
+						<li><a href="#res-generate">Finish Up</a></li>
 					</ul>
 					<!-- <ul class="nav navbar-nav navbar-right">
 						

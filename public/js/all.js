@@ -40,6 +40,95 @@ Vue.component('basic-info',{
 		console.log('basic-info component is ready'); 
 	}
 }); 
+Vue.component('res-display-list',{
+	
+	template:'#resDisplayList',
+
+	props:['title'],
+
+	data:function()
+	{
+		return {
+			items:[],
+
+			currentView:''
+		}; 
+	},
+
+	events:{
+		/*
+		* Gets all the data from the parent
+		*/
+
+		'display-skills':function(_skills)
+		{
+			console.log("receiving from parent"); 
+			this.items=_skills;
+			console.log(this.items); 
+		}, 
+
+		'display-experiences':function(_experiences)
+		{
+			this.items=_experiences; 
+		},
+
+		'display-projects':function(_projects)
+		{
+			this.items=_projects; 
+		},
+
+		'display-qualifications':function(_qualifications)
+		{
+			this.items=_qualifications; 
+		}
+	},
+
+	methods:{
+
+		//checks to see if there's data
+		//in the parent when routing
+		//if yes, it displays it. 
+		generateExistingList:function()
+		{
+			var hash= location.hash; 
+
+			if(hash==="#res-experience")
+			{
+				this.checkData(vm.experiences); 
+
+			}else if(hash==="#res-projects")
+			{
+				this.checkData(vm.projects); 
+			}else if(hash==="#res-education")
+			{
+				this.checkData(vm.qualifications); 
+			}else if(hash==="#res-skills")
+			{
+				this.checkData(vm.skills); 
+			}
+		}, 
+
+		checkData:function(data)
+		{
+			if (data.length) 
+			{
+				this.items=data; 
+			}
+		},
+
+		getHash:function()
+		{
+			return location.hash; 
+		}
+	},
+
+	ready:function()
+	{
+		console.log("res display list is active");
+		this.generateExistingList(); 
+		this.currentView=vm.currentView; 
+	}
+});
 Vue.component('res-education',{
 	template:'#resEducation',
 
@@ -113,6 +202,32 @@ Vue.component('res-experience',{
 		console.log("res experience component is working"); 
 	}
 });
+Vue.component('res-generate',{
+
+	template:'#resGenerate', 
+
+	props:['app_data'],
+
+	methods:{
+
+		checkIfIndexExists:function(index)
+		{
+			if(this.app_data[index]=={} || this.app_data[index]=='' || this.app_data[index]==[])
+			{
+				return false; 
+			}
+
+			return true; 
+		}
+
+	},
+
+	ready:function()
+	{
+		console.log("res generate component is ready"); 
+		console.log(this.app_data); 
+	}
+}); 
 Vue.component('res-projects',{
 	template:'#resProjects',
 
@@ -190,24 +305,86 @@ Vue.component('res-summary',{
 		console.log("res summary component is working"); 
 	}
 });
-new Vue({
+var vm = new Vue({
 	el:'body',
 
 	data:{
 
-		basic_info:{},
+		basic_info:{
 
-		summary:'',
+			full_name:'ajay madhukar',
 
-		experiences:[], 
+			phone_number: '0103679302',
 
-		projects:[], 
+			twitter_handle: '@aj_da_geek',
 
-		qualifications:[], 
+			personal_website:'ajay.com',
 
-		skills:[],
+			email_address:'a.madhukar@yahoo.com', 
 
-		currentView:''
+			linkedin_url:'linkedin.com/ajay', 
+
+			skype_username:'ajay madhukar'
+		},
+
+		summary: "I'm a young developer.", 
+
+		experiences:[
+
+			{
+				company_name: 'Fotobox', 
+
+				company_location:'Malaysia', 
+
+				duration:'1 month', 
+
+				role:'Coder', 
+
+				responsibilities: 'programming'
+			}
+		], 
+
+		projects: [
+
+			{
+				title:'windows phone app',
+
+				description:'budgeting app'
+			}
+		], 
+
+		qualifications:[
+
+			{
+				name: 'Bsc(Hons). In Software Engineering', 
+
+				institution_name: 'Asia Pacific University', 
+
+				institution_location:'Malaysia', 
+
+				graduation_date:'2015',
+
+				cgpa: '3.33'
+			}
+		],
+
+		skills: ['html5', 'css3', 'sass'], 
+
+		// basic_info:{},
+
+		// //summary:'',
+
+		// experiences:[], 
+
+		// projects:[], 
+
+		// qualifications:[], 
+
+		// skills:[],
+
+		currentView:'',
+
+		testing:'hello world'
 	},
 
 	events:{
@@ -235,29 +412,38 @@ new Vue({
 		{
 			console.log("receiving experience. adding it"); 
 			this.experiences.push(experience); 
+			this.broadcastData('display-experiences',this.experiences);
 		},
 
 		'new-project':function(project)
 		{
 			console.log("receiving the project. adding it"); 
 			this.projects.push(project); 
+			this.broadcastData('display-projects',this.projects);
 		},
 
 		'new-qualification':function(qualification)
 		{
 			console.log("receiving the qualification. adding it"); 
 			this.qualifications.push(qualification); 
+			this.broadcastData('display-qualifications',this.qualifications);
 		},
 
 		'new-skill':function(skill)
 		{
 			console.log("receiving the skill. adding it"); 
-			this.skills.push(skill); 
+			this.skills.push(skill); 	
+			this.broadcastData('display-skills',this.skills); 
 		},
 	},
 
 	methods:{
-		
+
+		broadcastData:function(channel,data)
+		{
+			this.$broadcast(channel,data); 
+		},
+
 		//routes when link is clicked
 		hashChanges:function()
 		{

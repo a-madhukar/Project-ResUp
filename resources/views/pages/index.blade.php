@@ -11,6 +11,7 @@
 	<res-projects></res-projects>
 	<res-education></res-education>
 	<res-skills></res-skills> -->
-
-	<component :is="currentView"></component> 
+	
+	<component v-if="currentView == 'res-generate'" :is="currentView" :app_data="$data"></component> 
+	<component v-else :is="currentView"></component> 
 @stop

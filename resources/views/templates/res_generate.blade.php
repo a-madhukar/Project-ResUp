@@ -1,5 +1,5 @@
 <template id="resGenerate">
-	<div class="row">
+<!-- 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="alert alert-info" id="pdf-alert">
 				<a href="#" 
@@ -19,7 +19,7 @@
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2 pdf-display">
 			@include('partials._pdfMakeJs')

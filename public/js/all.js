@@ -246,6 +246,8 @@ Vue.component('res-projects',{
 			console.log("pushing project to parent"); 
 			this.$dispatch('new-project',this.project); 
 			this.project={}; 
+
+			
 		}
 	},
 
@@ -307,77 +309,77 @@ var vm = new Vue({
 
 	data:{
 
-		basic_info:{
+		// basic_info:{
 
-			full_name:'ajay madhukar',
+		// 	full_name:'ajay madhukar',
 
-			phone_number: '0103679302',
+		// 	phone_number: '0103679302',
 
-			twitter_handle: '@aj_da_geek',
+		// 	twitter_handle: '@aj_da_geek',
 
-			personal_website:'ajay.com',
+		// 	personal_website:'ajay.com',
 
-			email_address:'a.madhukar@yahoo.com', 
+		// 	email_address:'a.madhukar@yahoo.com', 
 
-			linkedin_url:'linkedin.com/ajay', 
+		// 	linkedin_url:'linkedin.com/ajay', 
 
-			skype_username:'ajay madhukar'
-		},
+		// 	skype_username:'ajay madhukar'
+		// },
 
-		summary: "I'm a young developer.", 
+		// summary: "I'm a young developer.", 
 
-		experiences:[
+		// experiences:[
 
-			{
-				company_name: 'Fotobox', 
+		// 	{
+		// 		company_name: 'Fotobox', 
 
-				company_location:'Malaysia', 
+		// 		company_location:'Malaysia', 
 
-				duration:'1 month', 
+		// 		duration:'1 month', 
 
-				role:'Coder', 
+		// 		role:'Coder', 
 
-				responsibilities: 'programming'
-			}
-		], 
+		// 		responsibilities: 'programming'
+		// 	}
+		// ], 
 
-		projects: [
+		// projects: [
 
-			{
-				title:'windows phone app',
+		// 	{
+		// 		title:'windows phone app',
 
-				description:'budgeting app'
-			}
-		], 
+		// 		description:'budgeting app'
+		// 	}
+		// ], 
 
-		qualifications:[
+		// qualifications:[
 
-			{
-				name: 'Bsc(Hons). In Software Engineering', 
+		// 	{
+		// 		name: 'Bsc(Hons). In Software Engineering', 
 
-				institution_name: 'Asia Pacific University', 
+		// 		institution_name: 'Asia Pacific University', 
 
-				institution_location:'Malaysia', 
+		// 		institution_location:'Malaysia', 
 
-				graduation_date:'2015',
+		// 		graduation_date:'2015',
 
-				cgpa: '3.33'
-			}
-		],
+		// 		cgpa: '3.33'
+		// 	}
+		// ],
 
-		 skills: ['html5', 'css3', 'sass'], 
+		//  skills: ['html5', 'css3', 'sass'], 
 
-		// basic_info:{},
+		basic_info:{},
 
-		// summary:'',
+		summary:'',
 
-		// experiences:[], 
+		experiences:[], 
 
-		// projects:[], 
+		projects:[], 
 
-		// qualifications:[], 
+		qualifications:[], 
 
-		// skills:[],
+		skills:[],
 
 		currentView:'',
 

@@ -61,11 +61,11 @@ var vm = new Vue({
 			}
 		],
 
-		skills: ['html5', 'css3', 'sass'], 
+		 skills: ['html5', 'css3', 'sass'], 
 
 		// basic_info:{},
 
-		// //summary:'',
+		// summary:'',
 
 		// experiences:[], 
 

@@ -210,14 +210,11 @@ Vue.component('res-generate',{
 
 	methods:{
 
-		checkIfIndexExists:function(index)
+		checkBasicInfo:function()
 		{
-			if(this.app_data[index]=={} || this.app_data[index]=='' || this.app_data[index]==[])
-			{
-				return false; 
-			}
+			console.log(Object.keys(this.app_data.basic_info).length==0); 
 
-			return true; 
+			return Object.keys(this.app_data.basic_info).length==0 ? true : false; 
 		}
 
 	},
@@ -368,11 +365,11 @@ var vm = new Vue({
 			}
 		],
 
-		skills: ['html5', 'css3', 'sass'], 
+		 skills: ['html5', 'css3', 'sass'], 
 
 		// basic_info:{},
 
-		// //summary:'',
+		// summary:'',
 
 		// experiences:[], 
 

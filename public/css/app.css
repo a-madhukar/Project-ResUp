@@ -5810,7 +5810,8 @@ button.close {
 
 .pdf-title {
   text-transform: capitalize;
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  font-family: cursive; }
 
 .pdf-content {
   height: 100%; }
@@ -5839,14 +5840,39 @@ button.close {
 
 .skill-list {
   display: inline-block;
-  margin-right: 10px; }
+  margin-right: 10px;
+  font-family: monospace; }
 
 .skill-list:nth-child(odd) {
   font-weight: bold; }
 
 .summary-txt {
   font-size: 10pt;
-  color: #3a3f52; }
+  color: #3a3f52;
+  font-family: 'Noto Serif', serif;
+  font-style: italic; }
+
+.block-title {
+  font-family: 'Noto Serif', serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase; }
+
+.block-subtitle {
+  font-family: fantasy;
+  font-size: 10pt; }
+
+.contact-info {
+  text-transform: uppercase;
+  font-size: 8pt;
+  letter-spacing: 1px;
+  font-weight: bold; }
+
+.confirm-text {
+  margin-right: 10px; }
+
+#pdf-alert {
+  margin-bottom: 0px; }
 
 html {
   height: 100%;

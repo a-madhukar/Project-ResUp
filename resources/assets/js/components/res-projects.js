@@ -19,6 +19,8 @@ Vue.component('res-projects',{
 			console.log("pushing project to parent"); 
 			this.$dispatch('new-project',this.project); 
 			this.project={}; 
+
+			
 		}
 	},
 
